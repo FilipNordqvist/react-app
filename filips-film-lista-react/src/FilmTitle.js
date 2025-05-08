@@ -39,6 +39,17 @@ function deleteItem(id){
 setFilms(films.filter((item) => item.id !== id))
 }
 
+function sortAfterTitle(){
+    films.sort((a,b) => (a.title > b.title) ? 1 : -1)
+    console.log("Title sorterad: ", films)
+}
+
+function sortAfterGrade(){
+    films.sort((a,b) => (a.rating < b.rating) ? 1 : -1)
+    console.log("Betyg sorterad: ",films)
+    
+}
+
     return (
         <div>
             <label for="title-field">Titel:</label>
@@ -57,8 +68,15 @@ setFilms(films.filter((item) => item.id !== id))
             <option value="5">5</option>
             </select>
 
-            <button type="submit" className="btn btn-success mt-3" 
+            <button type="submit" className="btn btn-success mt-3 mr-5" 
             onClick={addItem}>Spara film</button> 
+
+            <button type="Sortera efter betyg" className="btn btn-primary mt-3 mr-5" 
+            onClick={sortAfterGrade}>Sortera efter betyg</button>
+
+            <button type="Sortera efter title" className="btn btn-warning mt-3 " 
+            onClick={sortAfterTitle}>Sortera efter title</button>
+
             
             <ul className="list-group">
                 { films.map(film => <Film key={film.id} item={film} deleteItem={deleteItem}/>) }
