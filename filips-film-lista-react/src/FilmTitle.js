@@ -40,12 +40,14 @@ setFilms(films.filter((item) => item.id !== id))
 }
 
 function sortAfterTitle(){
-    films.sort((a,b) => (a.title > b.title) ? 1 : -1)
-    console.log("Title sorterad: ", films)
+    const titleSort = films.slice().sort((a,b) => (a.title > b.title) ? 1 : -1)
+   setFilms(titleSort);
+   console.log("Du har sorterat: ", titleSort)
 }
 
 function sortAfterGrade(){
-    films.sort((a,b) => (a.rating < b.rating) ? 1 : -1)
+    const ratingSort = films.slice().sort((a,b) => (a.rating < b.rating) ? 1 : -1)
+    setFilms(ratingSort);
     console.log("Betyg sorterad: ",films)
     
 }
