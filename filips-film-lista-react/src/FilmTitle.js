@@ -4,8 +4,8 @@ import Film from "./Film";
 export default function FilmList(){
     const [films, setFilms] = useState([{
         id: 1,
-        title: "Filmen filmen?",
-        rating: 2,
+        title: "Film",
+        rating: 3,
     }
 ]);
 
