@@ -20,6 +20,8 @@ export default function Film(props) {
             <button  className="btn btn-sm btn-danger" style={{width: '40px', height: '40px'}} 
                 onClick={() => {props.deleteItem(props.item.id)}}> X</button>
             </div>
+        
+
                
              </li>      
     )
