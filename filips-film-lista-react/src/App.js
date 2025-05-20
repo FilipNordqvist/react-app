@@ -1,6 +1,7 @@
 import FilmTitle from "./FilmTitle";
 
 function App() {
+  
   return (
     <div>
       <h1>Filips Film Lista</h1>
